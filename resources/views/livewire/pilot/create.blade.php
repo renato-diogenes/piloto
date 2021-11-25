@@ -1,7 +1,7 @@
 <div>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('resources/views/dashboard.dashboard') }}
+            {{ __('resources/views/livewire/pilot/create.title') }}
         </h2>
     </x-slot>
 

@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Livewire\CreatePilots;
+use App\Http\Livewire\Pilot;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -19,11 +19,8 @@ Route::get('/', function () {
 });
 
 Route::middleware(['auth'])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-
-    Route::get('/pilots/create', CreatePilots::class)->name('createPilot');
+    Route::get('/pilots', Pilot\Index::class)->name('pilots.index');
+    Route::get('/pilots/create', Pilot\Create::class)->name('pilots.create');
 });
 
 require __DIR__.'/auth.php';
