@@ -13,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $app = $this->app;
+
+        foreach(config('bind') as $key => $value) {
+            $app->bind($key, $value);
+        }
     }
 
     /**
