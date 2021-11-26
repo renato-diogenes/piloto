@@ -1,5 +1,8 @@
 <?php
 
 return [
-    'title' => 'Dashboard'
+    'title' => 'Dashboard',
+    'image' => 'Image',
+    'seal' => 'Seal',
+    'machine' => 'Machine'
 ];
