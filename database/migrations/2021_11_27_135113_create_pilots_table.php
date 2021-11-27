@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Machine;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -15,6 +16,10 @@ class CreatePilotsTable extends Migration
     {
         Schema::create('pilots', function (Blueprint $table) {
             $table->id();
+            $table->string('image')->nullable();
+            $table->string('seal')->nullable();
+            $table->foreignIdFor(Machine::class)->nullable()->constrained()
+                ->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

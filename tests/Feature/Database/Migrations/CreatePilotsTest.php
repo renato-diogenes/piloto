@@ -14,4 +14,11 @@ class CreatePilotsTest extends TestCase
     {
         $this->assertTrue(Schema::hasTable('pilots'));
     }
+
+    public function test_pilots_table_has_the_corrects_colums(): void
+    {
+        $this->assertTrue(
+            Schema::hasColumns('pilots', ['image', 'seal', 'machine_id'])
+        );
+    }
 }
