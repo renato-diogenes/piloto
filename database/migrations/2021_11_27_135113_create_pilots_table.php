@@ -15,9 +15,6 @@ class CreatePilotsTable extends Migration
     {
         Schema::create('pilots', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
-            $table->string('seal');
-            $table->string('machine');
             $table->timestamps();
         });
     }

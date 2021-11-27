@@ -14,10 +14,10 @@ class PilotFactory extends Factory
      */
     public function definition()
     {
-        return [
+        return [/*
             'image' => '/public/images/' . Str::random(10),
             'seal' => Str::random(10),
-            'machine' => rand(0, 99999)
+            'machine' => rand(0, 99999)*/
         ];
     }
 }
