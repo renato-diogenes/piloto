@@ -16,7 +16,7 @@ class CreatePilotsTable extends Migration
     {
         Schema::create('pilots', function (Blueprint $table) {
             $table->id();
-            $table->string('image')->nullable();
+            $table->string('image');
             $table->string('seal')->nullable();
             $table->foreignIdFor(Machine::class)->nullable()->constrained()
                 ->onDelete('cascade')->onUpdate('cascade');

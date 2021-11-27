@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
+use App\Models\Machine;
 
 class PilotFactory extends Factory
 {
@@ -14,10 +15,12 @@ class PilotFactory extends Factory
      */
     public function definition()
     {
-        return [/*
-            'image' => '/public/images/' . Str::random(10),
+        return [
+            'image' => $this->faker->image(
+                storage_path('app/images'), 640, 480, null, false
+            ),
             'seal' => Str::random(10),
-            'machine' => rand(0, 99999)*/
+            'machine_id' => Machine::factory()
         ];
     }
 }
